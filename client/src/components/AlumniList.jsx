@@ -24,10 +24,13 @@ class AlumniList extends Component {
                   </div>
                   <li className="listedAlumni">
                     <p>
+                    <span className="firstLastName purple">
                       {" "}
                       {alumni.firstName} {alumni.lastName} ||{" "}
-                      <i class="fa fa-building-o" aria-hidden="true"></i>
+                      </span>
+                      <i class="fa fa-building-o green" aria-hidden="true"></i>{" "}
                       {alumni.industry} |{" "}
+                      <span className="alumniHood">({alumni.neighborhood}) </span>
                       <span
                         style={{ cursor: "pointer" }}
                         onClick={() => {
@@ -38,9 +41,12 @@ class AlumniList extends Component {
                       </span>
                     </p>
                     <p>
-                      {alumni.work} {alumni.studies}
+                      <i className="fas fa-briefcase green"></i>
+                      <span className="alumniWork">{alumni.work}</span>{" "}
+                      <i class="fa fa-university green" aria-hidden="true"></i>
+                      <span className="alumniStudies">{alumni.studies}</span>
                     </p>
-                    <p>{alumni.hood}</p>
+
                   </li>
                 </div>
               );
