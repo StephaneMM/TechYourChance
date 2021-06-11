@@ -199,9 +199,9 @@ class Home extends React.Component {
             <div className="d-flex justify-content-center">
             <div className="About-container p-5 mb-5 " style={{width:"800px"}}>  
             <div style={{marginTop: "-20px"}} className="w-100 d-flex justify-content-between mb-2 green">
-            <h2>🤓 About</h2>
-            <i style={{cursor: "pointer", border: "1px solid", padding: "6px", borderRadius: "50%"}} onClick={() => this.props.closeAbout()} className="mt-1 pt-2 fas fa-times"></i></div>
-            <p style={{borderLeft: "1px solid green", paddingLeft: "20px"}}>Empower the youth from disadvantage area with a map of professionnals coming from the same location. As a user you can access a list/map of professionals near your/an adress/neighborhood. 
+              <h2><i class="fas fa-glasses"></i> About</h2>
+              <i style={{cursor: "pointer", border: "1px solid", padding: "6px", borderRadius: "50%"}} onClick={() => this.props.closeAbout()} className="mt-1 pt-2 fas fa-times"></i></div>
+              <p className="purple" style={{borderLeft: "1px solid green", paddingLeft: "20px"}}>Empower the youth from disadvantage area with a map of professionnals coming from the same location. As a user you can access a list/map of professionals near your/an adress/neighborhood. 
             </p>
             </div>
             </div>

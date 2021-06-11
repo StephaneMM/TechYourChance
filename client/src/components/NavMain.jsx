@@ -63,14 +63,14 @@ export class NavMain extends Component {
         {!this.props.notif && context.isLoggedIn && <NavLink to="/chat" className="alert-message green"><i className=" fas fa-sms"></i> Go to chatroom</NavLink>}
       { this.props.notif && <NavLink to="/chat"  style={{color: this.state.buttonColor}} onClick={this.handleClick} className="alert-message green"><i className=" fas fa-sms"></i> {this.props.text} from {this.props.senderName}</NavLink>}
       
-      <div onClick={() => this.props.handleAbout()}><p style={{cursor: 'pointer'}} className="green ml-3">About</p></div>
+      <div onClick={() => this.props.handleAbout()}><p style={{cursor: 'pointer'}} className="green ml-3"><i class="fas fa-glasses"></i> About</p></div>
       </div>
       <ul className="nav-list">
         {context.isLoggedIn && (
           <React.Fragment>
             <li>
               <NavLink to="/profile/settings">
-                {context.user && context.user.email}
+                {context.user && <div className="purple"><span className="font-weight-bold mr-3"><i class="fas fa-user"></i> {context.user.firstName} {context.user.lastName}</span>  <i class="fas fa-envelope-square"></i>  {context.user.email}</div>}
   
 
               </NavLink>
