@@ -166,8 +166,8 @@ class FormSignup extends Component {
                 name="status"
                 data-target="row"
               >
-                <option value="student">in middle/high school</option>
-                <option value="alumni">a student or professional </option>
+                <option value="student">in middle/high school student</option>
+                <option value="alumni">a graduate or professional </option>
                 {/* <option value="stretch" selected>click and select</option> */}
               </select>
             </div>

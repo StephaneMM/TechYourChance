@@ -12,13 +12,14 @@ export class Chat extends Component {
         channel: null,
         username: null,
         olderMessages: null,
-        alumnis: []
+        alumnis: [],
+
     }
     socket;
 
 
     componentDidMount() {
-        (this.props.alumni && console.log(this.props.alumni ))
+
         axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/chat/getChannels`, {withCredentials: true})
         .then((response) => {
 
@@ -111,7 +112,7 @@ export class Chat extends Component {
 
             let alumni_id = response.data.response._id
             let alumni_name = response.data.response.firstName
-            let alumni_mail= response.data.response.email
+
 
             this.props.handleMessageNotif(alumni_id, alumni_name)
         })
