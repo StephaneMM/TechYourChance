@@ -23,7 +23,7 @@ const AlumniDisplay = ({handleConversation,  item, handleClose }) => {
         <img className="user-img mb-5" src={item.image} alt="item" />
       </div>
       <h2 onClick={() => { handleClick(item._id)} }  className="title purple mb-4 pointer">{item.firstName} {item.lastName} <i className="purple fas fa-comments"></i></h2>
-      <p className="description text-center"><i className="green fas fa-map-pin"></i> {item.formattedAddress} | {item.neighborhood}</p>
+      <p className="description text-center"><i className="green fas fa-map-pin"></i> {item.neighborhood}</p>
      
       {item.status === "alumni" && 
       <div className="user-info d-flex flex-column">
