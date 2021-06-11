@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
       });
     return (
     <div >
-      <div className="d-flex justify-content-center align-items-center mb-5">
+      <div className="d-flex justify-content-center mb-5">
           <AutoComplete
             value={this.props.searchValue}
             onSelect={this.handleSearch}

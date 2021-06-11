@@ -2,7 +2,7 @@ import React, { Component, Link } from "react";
 
 class AlumniList extends Component {
   handleClick = (alumni_id) => {
-    console.log(alumni_id);
+
     this.props.handleCard(alumni_id);
   };
   render() {

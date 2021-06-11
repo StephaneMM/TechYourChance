@@ -57,6 +57,7 @@ router.post("/signup",  upload.single("image"), (req, res, next) => {
     req.body.image = req.file.path; // Add image key to req.body
   }
 
+    
   User.findOne({ email })
     .then((userDocument) => {
       if (userDocument) {
@@ -82,7 +83,10 @@ router.post("/signup",  upload.single("image"), (req, res, next) => {
       User.create(newUser)
         .then((newUserDocument) => {
           /* Login on signup */
-          req.session.currentUser = newUserDocument._id;
+          req.session.currentUser = {
+            role: "admin",
+            id: newUserDocument._id,
+          };
           res.redirect("/api/auth/isLoggedIn");
         })
         .catch(next);
